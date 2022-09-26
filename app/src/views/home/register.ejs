@@ -13,11 +13,14 @@
 <body>
     <img src="" alt="">
     <div class="login">
-        <h1>Login</h1>
+        <h1>사용자 등록</h1>
         <form method="post">
             <input id="id" type="text" name="u" placeholder="아이디" required="required" />
+            <input id="name" type="text" name="u" placeholder="이름" required="required" />
+            <input id="rank" type="text" name="u" placeholder="직급" required="required" />
             <input id="password" type="password" name="p" placeholder="비밀번호" required="required" />
-            <button type="submit" class="btn btn-primary btn-block btn-large">로그인</button>
+            <input id="confirm-password" type="password" name="p" placeholder="비밀번호 확인" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">등록</button>
         </form>
     </div>
 </body>
