@@ -5,6 +5,7 @@ class UserStorage{
         id: ["hyuni2020", "장재현", "황윤승"],
         password: ["1234", "1234", "123456"],
         name: ["장차장", "장차장", "황이사"],
+        rank: ["차장", "차장", "이사"],
     };
 
     static getUsers(...fields) {
@@ -29,6 +30,15 @@ class UserStorage{
         }, {});
 
         return userInfo;
+    }
+
+    static save(userInfo) {
+        const users = this.#users;
+        users.id.push(userInfo.id);
+        users.name.push(userInfo.name);
+        users.rank.push(userInfo.rank);
+        users.password.push(userInfo.password);
+        return { success: true};
     }
 }
 
